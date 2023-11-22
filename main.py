@@ -1,17 +1,10 @@
 import streamlit as st
-import sns
-import os
 import torch
-import logging
 import numpy as np
 import pandas as pd
 
 from transformers import GenerationConfig, AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 from peft import AutoPeftModelForCausalLM
-
-sns.set()
-
-logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
 
 base_model, new_model = "microsoft/biogpt" , 'rlmjy/ft_new_biogpt'
 
